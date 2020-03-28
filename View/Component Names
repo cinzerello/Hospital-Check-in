@@ -1,0 +1,12 @@
+Patient View
+
+Hospital Name Labe: lblHName
+Date Picker: dtApptDate
+Docotr Drop Down: ddDoctor
+Appt Time Drop Down: ddAppt
+
+Hospital View
+
+Hospital Name Labe: lblHName
+Date Picker: dtApptDate
+Appointment List View: lvAppt
