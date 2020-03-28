@@ -38,14 +38,14 @@
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" layoutX="12.0" layoutY="8.0" prefHeight="54.0" prefWidth="311.0" text="Hospital Name" wrapText="true">
+            <Label fx:id="lblHName" alignment="CENTER" layoutX="12.0" layoutY="8.0" prefHeight="54.0" prefWidth="311.0" text="Hospital Name" wrapText="true">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <DatePicker fx:id="dtAptDate" layoutX="78.0" layoutY="91.0" />
+            <DatePicker fx:id="dtApptDate" layoutX="78.0" layoutY="91.0" />
             <Label alignment="CENTER" layoutX="92.0" layoutY="63.0" prefHeight="18.0" prefWidth="151.0" text="Date" />
-            <ListView layoutX="32.0" layoutY="136.0" prefHeight="300.0" prefWidth="271.0" />
+            <ListView fx:id="lvAppt" layoutX="32.0" layoutY="136.0" prefHeight="300.0" prefWidth="271.0" />
          </children>
       </Pane>
    </center>
