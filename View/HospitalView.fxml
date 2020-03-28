@@ -1,52 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.AppBar?>
-<?import com.gluonhq.charm.glisten.control.Icon?>
-<?import com.gluonhq.charm.glisten.mvc.View?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<View maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <AppBar titleText="CHECK IN" BorderPane.alignment="CENTER">
-         <navIcon>
-            <Button>
-               <graphic>
-                  <Icon content="ARROW_BACK" />
-               </graphic>
-            </Button>
-         </navIcon>
-         <menuItems>
-            <MenuItem text="Menu Item 1" />
-            <MenuItem text="Menu Item 2" />
-         </menuItems>
-      </AppBar>
-   </top>
-   <bottom>
-      <Button fx:id="btnReady" mnemonicParsing="false" prefHeight="68.0" prefWidth="172.0" text="READY" textFill="WHITE" translateY="-20.0" BorderPane.alignment="CENTER">
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <DatePicker fx:id="dtDate" layoutX="542.0" layoutY="152.0" />
+      <TableView fx:id="tApptInfo" layoutX="117.0" layoutY="201.0" prefHeight="460.0" prefWidth="966.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="195.0" text="Name" />
+          <TableColumn fx:id="colPhone" prefWidth="114.0" text="Phone #" />
+            <TableColumn fx:id="colAddress" minWidth="0.0" prefWidth="287.0" text="Address" />
+            <TableColumn fx:id="colDoctor" prefWidth="153.0" text="Doctor" />
+            <TableColumn fx:id="colAptTime" prefWidth="83.0" text="Apt Time" />
+            <TableColumn fx:id="colReady" minWidth="0.0" prefWidth="130.0" text="Ready?" />
+        </columns>
+      </TableView>
+      <Label layoutX="484.0" layoutY="151.0" text="Date:">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHName" layoutX="474.0" layoutY="60.0" text="Hospital Name">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnUpdate" layoutX="548.0" layoutY="700.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="105.0" text="Update">
+         <font>
+            <Font size="14.0" />
          </font>
       </Button>
-   </bottom>
-   <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label fx:id="lblHName" alignment="CENTER" layoutX="12.0" layoutY="8.0" prefHeight="54.0" prefWidth="311.0" text="Hospital Name" wrapText="true">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-            <DatePicker fx:id="dtApptDate" layoutX="78.0" layoutY="91.0" />
-            <Label alignment="CENTER" layoutX="92.0" layoutY="63.0" prefHeight="18.0" prefWidth="151.0" text="Date" />
-            <ListView fx:id="lvAppt" layoutX="32.0" layoutY="136.0" prefHeight="300.0" prefWidth="271.0" />
-         </children>
-      </Pane>
-   </center>
-</View>
+   </children>
+</Pane>
