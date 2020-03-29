@@ -1,0 +1,20 @@
+Patient View
+
+Hospital Name Label: lblHName
+Date Picker: dtApptDate
+Docotr Drop Down: ddDoctor
+Appt Time Drop Down: ddAppt
+
+Hospital View
+
+Hospital Name Label: lblHName
+Date Picker: dtDate
+Table: tApptInfo
+  Columns:
+   colName
+   colPhone
+   colAddress
+   colDoctor
+   colAptTime
+   colReady
+Update Button: btnUpdate
